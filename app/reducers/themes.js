@@ -1,0 +1,14 @@
+import { CHANGE_PRIMARY_COLOR } from "../actions";
+
+const INITIAL_STATE = {
+  primaryColor: "#4F6D7A"
+};
+
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case CHANGE_PRIMARY_COLOR:
+      return { ...state, primaryColor: action.color };
+    default:
+      return state;
+  }
+};
